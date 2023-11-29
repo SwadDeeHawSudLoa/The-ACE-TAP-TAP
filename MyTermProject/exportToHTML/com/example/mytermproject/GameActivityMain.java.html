@@ -1,0 +1,300 @@
+<html>
+<head>
+<title>GameActivityMain.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6897bb;}
+.s3 { color: #808080;}
+.s4 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+GameActivityMain.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com.example.mytermproject</span><span class="s0">;</span>
+<span class="s0">import static </span><span class="s1">com.example.mytermproject.Constants.DATE</span><span class="s0">;</span>
+<span class="s0">import static </span><span class="s1">com.example.mytermproject.Constants.LEVEL</span><span class="s0">;</span>
+<span class="s0">import static </span><span class="s1">com.example.mytermproject.Constants.TABLE_NAME</span><span class="s0">;</span>
+<span class="s0">import static </span><span class="s1">com.example.mytermproject.Constants.scoreTap</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">androidx.appcompat.app.AlertDialog</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">androidx.appcompat.app.AppCompatActivity</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.app.Dialog</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.content.ContentValues</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.content.DialogInterface</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.content.Intent</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.content.res.Resources</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.database.sqlite.SQLiteDatabase</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.os.Bundle</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.os.CountDownTimer</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.os.Handler</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.os.Looper</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.view.LayoutInflater</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.view.MotionEvent</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.view.View</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.widget.Button</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.widget.EditText</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.widget.ImageButton</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.widget.ImageView</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.widget.LinearLayout</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.widget.ProgressBar</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.widget.TextView</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.util.Log</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">java.text.SimpleDateFormat</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">java.util.Date</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">java.util.Random</span><span class="s0">;</span>
+<span class="s0">public class </span><span class="s1">GameActivityMain </span><span class="s0">extends </span><span class="s1">AppCompatActivity {</span>
+    <span class="s0">private </span><span class="s1">Handler handler</span><span class="s0">;</span>
+    <span class="s0">private </span><span class="s1">Button itemButon</span><span class="s0">;</span>
+    <span class="s0">private boolean </span><span class="s1">isX2 = </span><span class="s0">false;</span>
+    <span class="s0">private boolean </span><span class="s1">shown_dialog = </span><span class="s0">false;</span>
+    <span class="s0">boolean </span><span class="s1">isTimeOut = </span><span class="s0">false;</span>
+    <span class="s0">public static int </span><span class="s1">tap = </span><span class="s2">0</span><span class="s0">;</span>
+    <span class="s0">public static int </span><span class="s1">dt= </span><span class="s2">10000</span><span class="s0">;</span>
+    <span class="s0">public static int </span><span class="s1">level = </span><span class="s2">1</span><span class="s0">;</span>
+    <span class="s0">public static int </span><span class="s1">MAX_TAP = </span><span class="s2">100</span><span class="s0">;</span>
+    <span class="s0">int </span><span class="s1">n =</span><span class="s2">100</span><span class="s0">;</span>
+    <span class="s0">private </span><span class="s1">ProgressBar progressBar</span><span class="s0">;</span>
+    <span class="s0">private </span><span class="s1">TextView timerTextView</span><span class="s0">;</span>
+    <span class="s0">private </span><span class="s1">CountDownTimer countDownTimer</span><span class="s0">;</span>
+    <span class="s0">private </span><span class="s1">Dialog countdownDialog</span><span class="s0">;</span>
+    <span class="s1">ImageView img</span><span class="s0">;</span>
+    <span class="s1">EventData events</span><span class="s0">;    int </span><span class="s1">bool </span><span class="s0">;</span>
+    <span class="s0">private int </span><span class="s1">countdownValue = </span><span class="s2">3</span><span class="s0">; </span><span class="s3">// Set your initial countdown value</span>
+    <span class="s1">@Override</span>
+    <span class="s0">protected void </span><span class="s1">onCreate(Bundle savedInstanceState) {</span>
+        <span class="s0">super</span><span class="s1">.onCreate(savedInstanceState)</span><span class="s0">;</span>
+        <span class="s1">setContentView(R.layout.activity_game_main)</span><span class="s0">;</span>
+        <span class="s1">handler = </span><span class="s0">new </span><span class="s1">Handler(Looper.getMainLooper())</span><span class="s0">;</span>
+        <span class="s3">// Start the automatic countdown dialog</span>
+        <span class="s1">startAutoCountdownDialog()</span><span class="s0">;</span>
+    <span class="s1">}</span>
+    <span class="s0">private void </span><span class="s1">start() {</span>
+        <span class="s1">Random ran = </span><span class="s0">new </span><span class="s1">Random()</span><span class="s0">;</span>
+        <span class="s1">itemButon = findViewById(R.id.imageButton)</span><span class="s0">;</span>
+        <span class="s1">tap = </span><span class="s2">0</span><span class="s0">;</span>
+        <span class="s1">level = </span><span class="s2">1</span><span class="s0">;</span>
+        <span class="s1">MAX_TAP = </span><span class="s2">100</span><span class="s0">;</span>
+        <span class="s1">timerTextView = findViewById(R.id.timerTextView)</span><span class="s0">;</span>
+        <span class="s1">TextView t1 = findViewById(R.id.textView2)</span><span class="s0">;</span>
+        <span class="s1">progressBar = findViewById(R.id.simpleProgressBar)</span><span class="s0">;</span>
+        <span class="s3">// Set the time duration in milliseconds (e.g., 10 seconds)</span>
+        <span class="s0">long </span><span class="s1">durationMillis = dt</span><span class="s0">;</span>
+        <span class="s1">countDownTimer = </span><span class="s0">new </span><span class="s1">CountDownTimer(durationMillis</span><span class="s0">, </span><span class="s2">1000</span><span class="s1">) {</span>
+            <span class="s1">@Override</span>
+            <span class="s0">public void </span><span class="s1">onTick(</span><span class="s0">long </span><span class="s1">millisUntilFinished) {</span>
+                <span class="s1">bool = ran.nextInt(</span><span class="s2">4</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s0">if</span><span class="s1">(bool == </span><span class="s2">1</span><span class="s1">){</span>
+                    <span class="s0">int </span><span class="s1">delayTime = </span><span class="s2">3000</span><span class="s0">;</span>
+
+                    <span class="s3">// Use a Handler to delay the appearance of the button</span>
+                    <span class="s0">new </span><span class="s1">Handler().postDelayed(</span><span class="s0">new </span><span class="s1">Runnable() {</span>
+                        <span class="s1">@Override</span>
+                        <span class="s0">public void </span><span class="s1">run() {</span>
+                            <span class="s0">int </span><span class="s1">a = ran.nextInt(</span><span class="s2">4</span><span class="s1">)</span><span class="s0">;</span>
+                            <span class="s0">switch </span><span class="s1">(a){</span>
+                                <span class="s0">case </span><span class="s2">0</span><span class="s1">:itemButon.setTranslationX(R.dimen.size_10_50)</span><span class="s0">;break;</span>
+                                <span class="s0">case </span><span class="s2">1</span><span class="s1">:itemButon.setTranslationX(</span><span class="s2">100</span><span class="s1">)</span><span class="s0">;break;</span>
+                                <span class="s0">case </span><span class="s2">2</span><span class="s1">:itemButon.setTranslationX(R.dimen.size_17_150)</span><span class="s0">;break;</span>
+                                <span class="s0">default</span><span class="s1">:itemButon.setTranslationX(R.dimen.size_19_195)</span><span class="s0">;break;</span>
+                            <span class="s1">}</span>
+                            <span class="s3">// Show the button</span>
+                            <span class="s1">itemButon.setVisibility(View.VISIBLE)</span><span class="s0">;</span>
+                            <span class="s0">int </span><span class="s1">disappearanceDelay = </span><span class="s2">3000</span><span class="s0">;</span>
+                            <span class="s0">new </span><span class="s1">Handler().postDelayed(</span><span class="s0">new </span><span class="s1">Runnable() {</span>
+                                <span class="s1">@Override</span>
+                                <span class="s0">public void </span><span class="s1">run() {</span>
+                                    <span class="s3">// Hide the button after the specified disappearance delay</span>
+                                    <span class="s1">itemButon.setVisibility(View.INVISIBLE)</span><span class="s0">;</span>
+                                <span class="s1">}</span>
+                            <span class="s1">}</span><span class="s0">, </span><span class="s1">disappearanceDelay)</span><span class="s0">;</span>
+                        <span class="s1">}</span>
+                    <span class="s1">}</span><span class="s0">, </span><span class="s1">delayTime)</span><span class="s0">;</span>
+                    <span class="s1">itemButon.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() {</span>
+                        <span class="s1">@Override</span>
+                        <span class="s0">public void </span><span class="s1">onClick(View v) {</span>
+                            <span class="s1">isX2 = </span><span class="s0">true;</span>
+                            <span class="s0">int </span><span class="s1">disappearanceDelay = </span><span class="s2">3000</span><span class="s0">;</span>
+
+
+                            <span class="s0">new </span><span class="s1">Handler().postDelayed(</span><span class="s0">new </span><span class="s1">Runnable() {</span>
+                                <span class="s1">@Override</span>
+                                <span class="s0">public void </span><span class="s1">run() {</span>
+                                    <span class="s1">isX2 = </span><span class="s0">false;</span>
+                                <span class="s1">}</span>
+                            <span class="s1">}</span><span class="s0">, </span><span class="s1">disappearanceDelay)</span><span class="s0">;</span>
+                        <span class="s1">}</span>
+                    <span class="s1">})</span><span class="s0">;</span>
+                <span class="s1">}</span>
+                <span class="s0">long </span><span class="s1">secondsRemaining = millisUntilFinished / </span><span class="s2">1000</span><span class="s0">;</span>
+                <span class="s1">timerTextView.setText(</span><span class="s4">&quot;Time remaining: &quot; </span><span class="s1">+ secondsRemaining + </span><span class="s4">&quot; seconds&quot;</span><span class="s1">)</span><span class="s0">;;</span>
+            <span class="s1">}</span>
+            <span class="s1">@Override</span>
+            <span class="s0">public void </span><span class="s1">onFinish() {</span>
+                <span class="s3">// Action to be performed when the countdown is finished</span>
+                <span class="s1">timerTextView.setText(</span><span class="s4">&quot;Time Out!!!!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">showDialog()</span><span class="s0">;</span>
+            <span class="s1">}</span>
+        <span class="s1">}</span><span class="s0">;</span>
+        <span class="s3">// Start the countdown timer</span>
+        <span class="s1">countDownTimer.start()</span><span class="s0">;</span>
+        <span class="s1">LinearLayout gamelayout = findViewById(R.id.activity_game_main)</span><span class="s0">;</span>
+        <span class="s1">gamelayout.setOnTouchListener(</span><span class="s0">new </span><span class="s1">View.OnTouchListener() {</span>
+            <span class="s1">@Override</span>
+            <span class="s0">public boolean </span><span class="s1">onTouch(View v</span><span class="s0">, </span><span class="s1">MotionEvent event) {</span>
+                <span class="s1">Log.i(</span><span class="s4">&quot;TouchEvent&quot;</span><span class="s0">, </span><span class="s4">&quot;Touch is detected&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s0">if</span><span class="s1">(isX2 == </span><span class="s0">true</span><span class="s1">){</span>
+                    <span class="s1">tap = tap+</span><span class="s2">2</span><span class="s0">;</span>
+                <span class="s1">}</span><span class="s0">else</span><span class="s1">{</span>
+                <span class="s1">tap = tap + </span><span class="s2">1</span><span class="s0">;</span>
+                <span class="s1">}</span>
+                <span class="s1">progressBar.setProgress(tap)</span><span class="s0">;</span>
+                <span class="s3">// Adjust thresholds based on constants</span>
+                <span class="s1">Scase(level</span><span class="s0">,</span><span class="s1">MAX_TAP</span><span class="s0">,</span><span class="s1">tap)</span><span class="s0">;</span>
+                <span class="s0">if </span><span class="s1">(tap == MAX_TAP) {</span>
+                    <span class="s1">tap = </span><span class="s2">0</span><span class="s0">;</span>
+                    <span class="s1">level += </span><span class="s2">1</span><span class="s0">;</span>
+                    <span class="s1">MAX_TAP = MAX_TAP * level</span><span class="s0">;</span>
+                    <span class="s1">t1.setText(</span><span class="s4">&quot;level&quot; </span><span class="s1">+ level)</span><span class="s0">;</span>
+                    <span class="s1">progressBar.setMax(MAX_TAP)</span><span class="s0">;</span>
+                <span class="s1">}</span>
+                <span class="s0">return true;</span>
+            <span class="s1">}</span>
+        <span class="s1">})</span><span class="s0">;</span>
+    <span class="s1">}</span>
+    <span class="s0">public void </span><span class="s1">Scase(</span><span class="s0">int </span><span class="s1">level</span><span class="s0">,int </span><span class="s1">max_tap</span><span class="s0">,int </span><span class="s1">tap){</span>
+      <span class="s1">img = findViewById(R.id.imageView)</span><span class="s0">;</span>
+        <span class="s0">switch </span><span class="s1">(level){</span>
+            <span class="s0">case </span><span class="s2">1</span><span class="s1">:</span><span class="s0">if</span><span class="s1">(tap == max_tap/</span><span class="s2">4</span><span class="s1">){</span>
+                <span class="s1">img.setImageResource(R.drawable.cartoonch)</span><span class="s0">;</span>
+            <span class="s1">}</span><span class="s0">else if</span><span class="s1">(tap == max_tap/</span><span class="s2">2</span><span class="s1">){</span>
+
+            <span class="s1">}</span><span class="s0">else if</span><span class="s1">(tap == max_tap){</span>
+
+            <span class="s1">}</span>
+            <span class="s0">break;</span>
+            <span class="s0">case </span><span class="s2">2</span><span class="s1">:</span><span class="s0">if</span><span class="s1">(tap == max_tap/</span><span class="s2">4</span><span class="s1">){</span>
+
+            <span class="s1">}</span><span class="s0">else if</span><span class="s1">(tap == max_tap/</span><span class="s2">2</span><span class="s1">){</span>
+
+            <span class="s1">}</span><span class="s0">else if</span><span class="s1">(tap == max_tap){</span>
+
+            <span class="s1">}</span>
+            <span class="s0">break;</span>
+            <span class="s0">case </span><span class="s2">4</span><span class="s1">:</span><span class="s0">if</span><span class="s1">(tap == max_tap/</span><span class="s2">4</span><span class="s1">){</span>
+
+            <span class="s1">}</span><span class="s0">else if</span><span class="s1">(tap == max_tap/</span><span class="s2">2</span><span class="s1">){</span>
+
+            <span class="s1">}</span><span class="s0">else if</span><span class="s1">(tap == max_tap){</span>
+
+            <span class="s1">}</span>
+            <span class="s0">break;</span>
+            <span class="s0">case </span><span class="s2">5</span><span class="s1">:</span><span class="s0">if</span><span class="s1">(tap == max_tap/</span><span class="s2">4</span><span class="s1">){</span>
+
+            <span class="s1">}</span><span class="s0">else if</span><span class="s1">(tap == max_tap/</span><span class="s2">2</span><span class="s1">){</span>
+
+            <span class="s1">}</span><span class="s0">else if</span><span class="s1">(tap == max_tap){</span>
+
+            <span class="s1">}</span>
+            <span class="s0">break;</span>
+            <span class="s3">//case 6:</span>
+            <span class="s3">//case 7:</span>
+
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+    <span class="s0">private void </span><span class="s1">startAutoCountdownDialog() {</span>
+        <span class="s3">// Create a custom dialog</span>
+        <span class="s1">countdownDialog = </span><span class="s0">new </span><span class="s1">Dialog(</span><span class="s0">this</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">countdownDialog.setCancelable(</span><span class="s0">false</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">View dialogView = LayoutInflater.from(</span><span class="s0">this</span><span class="s1">).inflate(R.layout.countdown</span><span class="s0">, null</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">countdownDialog.setContentView(dialogView)</span><span class="s0">;</span>
+        <span class="s3">// Get the TextView from the dialog layout</span>
+        <span class="s1">TextView countdownTextView = dialogView.findViewById(R.id.countdownText)</span><span class="s0">;</span>
+        <span class="s3">// Start the automatic countdown</span>
+        <span class="s1">startAutoCountdown(countdownTextView)</span><span class="s0">;</span>
+        <span class="s3">// Show the dialog</span>
+        <span class="s1">countdownDialog.show()</span><span class="s0">;</span>
+    <span class="s1">}</span>
+    <span class="s0">private void </span><span class="s1">startAutoCountdown(</span><span class="s0">final </span><span class="s1">TextView countdownTextView) {</span>
+        <span class="s1">handler.postDelayed(</span><span class="s0">new </span><span class="s1">Runnable() {</span>
+            <span class="s1">@Override</span>
+            <span class="s0">public void </span><span class="s1">run() {</span>
+                <span class="s3">// Decrease the countdown value</span>
+                <span class="s1">countdownValue--</span><span class="s0">;</span>
+                <span class="s3">// Update the TextView with the countdown value</span>
+                <span class="s1">countdownTextView.setText(</span><span class="s4">&quot;Countdown: &quot; </span><span class="s1">+ countdownValue)</span><span class="s0">;</span>
+                <span class="s3">// Check if the countdown is complete</span>
+                <span class="s0">if </span><span class="s1">(countdownValue &gt;= </span><span class="s2">0</span><span class="s1">) {</span>
+                    <span class="s3">// Schedule the next update after 1 second</span>
+                    <span class="s1">handler.postDelayed(</span><span class="s0">this, </span><span class="s2">1000</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                    <span class="s3">// Update the TextView with &quot;start&quot;</span>
+                    <span class="s1">countdownTextView.setText(</span><span class="s4">&quot;start&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s3">// Dismiss the dialog when the countdown is finished after a brief delay</span>
+                    <span class="s1">handler.postDelayed(</span><span class="s0">new </span><span class="s1">Runnable() {</span>
+                        <span class="s1">@Override</span>
+                        <span class="s0">public void </span><span class="s1">run() {</span>
+                            <span class="s1">countdownDialog.dismiss()</span><span class="s0">;</span>
+                            <span class="s1">start()</span><span class="s0">; </span><span class="s3">// Call the start method after the countdown is complete</span>
+                        <span class="s1">}</span>
+                    <span class="s1">}</span><span class="s0">, </span><span class="s2">1000</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">}</span>
+            <span class="s1">}</span>
+        <span class="s1">}</span><span class="s0">, </span><span class="s2">1000</span><span class="s1">)</span><span class="s0">; </span><span class="s3">// Start the countdown immediately and update every 1 second</span>
+    <span class="s1">}</span>
+    <span class="s0">private void </span><span class="s1">showDialog(){</span>
+        <span class="s1">Resources res = getResources()</span><span class="s0">;</span>
+        <span class="s0">if </span><span class="s1">(shown_dialog!=</span><span class="s0">true</span><span class="s1">) { shown_dialog = </span><span class="s0">true ;</span>
+            <span class="s1">AlertDialog.Builder builder = </span><span class="s0">new </span><span class="s1">AlertDialog.Builder(</span><span class="s0">this</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">builder.setTitle(</span><span class="s4">&quot;GameOver&quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">builder.setMessage(</span><span class="s4">&quot;TimeOut&quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">builder.setPositiveButton(</span><span class="s4">&quot;backToMenu&quot;</span><span class="s0">, new </span><span class="s1">DialogInterface.OnClickListener() {</span>
+                <span class="s1">@Override</span>
+                <span class="s0">public void </span><span class="s1">onClick(DialogInterface dialog</span><span class="s0">, int </span><span class="s1">which) {</span>
+                    <span class="s3">// Handle OK button click if needed</span>
+                     <span class="s1">events = </span><span class="s0">new </span><span class="s1">EventData(GameActivityMain.</span><span class="s0">this</span><span class="s1">)</span><span class="s0">;</span>
+                     <span class="s1">addEvent()</span><span class="s0">;</span>
+                     <span class="s1">events.close()</span><span class="s0">;</span>
+                    <span class="s1">Intent intent = </span><span class="s0">new </span><span class="s1">Intent(GameActivityMain.</span><span class="s0">this,</span><span class="s1">MainActivity.</span><span class="s0">class</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">startActivity(intent)</span><span class="s0">;</span>
+
+                    <span class="s1">dialog.dismiss()</span><span class="s0">;</span>
+
+                    <span class="s1">shown_dialog = </span><span class="s0">false;</span>
+                <span class="s1">}</span>
+            <span class="s1">})</span><span class="s0">;</span>
+            <span class="s1">builder.setNegativeButton(</span><span class="s4">&quot;Restart&quot;</span><span class="s0">, new </span><span class="s1">DialogInterface.OnClickListener() {</span>
+                <span class="s1">@Override</span>
+                <span class="s0">public void </span><span class="s1">onClick(DialogInterface dialog</span><span class="s0">, int </span><span class="s1">which) {</span>
+                    <span class="s1">Intent intent = </span><span class="s0">new </span><span class="s1">Intent(GameActivityMain.</span><span class="s0">this,</span><span class="s1">GameActivityMain.</span><span class="s0">class</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">startActivity(intent)</span><span class="s0">;</span>
+                    <span class="s1">startAutoCountdownDialog()</span><span class="s0">;</span>
+                    <span class="s1">dialog.dismiss()</span><span class="s0">;</span>
+                    <span class="s1">shown_dialog = </span><span class="s0">false;</span>
+                <span class="s1">}</span>
+            <span class="s1">})</span><span class="s0">;</span>
+            <span class="s1">builder.setCancelable(</span><span class="s0">false</span><span class="s1">)</span><span class="s0">; </span><span class="s3">// Prevent dialog from being dismissed by tapping outside</span>
+            <span class="s1">AlertDialog dialog = builder.create()</span><span class="s0">;</span>
+            <span class="s1">dialog.show()</span><span class="s0">;</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+    <span class="s0">private void </span><span class="s1">addEvent(){</span>
+       <span class="s3">// Change this line to use 'tap' directly</span>
+        <span class="s1">SQLiteDatabase db = events.getWritableDatabase()</span><span class="s0">;</span>
+        <span class="s1">ContentValues values = </span><span class="s0">new </span><span class="s1">ContentValues()</span><span class="s0">;</span>
+        <span class="s1">SimpleDateFormat sdf = </span><span class="s0">new </span><span class="s1">SimpleDateFormat(</span><span class="s4">&quot;dd/MM/yyyy&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">String currentDateAndTime = sdf.format(</span><span class="s0">new </span><span class="s1">Date())</span><span class="s0">;</span>
+        <span class="s1">values.put(DATE</span><span class="s0">, </span><span class="s1">currentDateAndTime)</span><span class="s0">;</span>
+        <span class="s1">values.put(scoreTap</span><span class="s0">, </span><span class="s1">tap)</span><span class="s0">;</span>
+        <span class="s1">values.put(LEVEL</span><span class="s0">, </span><span class="s1">level)</span><span class="s0">;</span>
+        <span class="s1">db.insert(TABLE_NAME</span><span class="s0">, null, </span><span class="s1">values)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+<span class="s1">}</span></pre>
+</body>
+</html>

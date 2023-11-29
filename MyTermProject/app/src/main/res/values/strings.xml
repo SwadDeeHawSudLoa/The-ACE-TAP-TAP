@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">My Term Project</string>
+    <string name="setting">SETTING</string>
+    <string name="START">START</string>
+    <string name="TimeLimit">TimeLimit</string>
+    <string name="level1">level1</string>
+    <string name="level2">level2</string>
+    <string name="leve3">level3</string>
+    <string name="level4">level4</string>
+    <string name="threemins">30secs</string>
+    <string name="fivemins">50sec</string>
+    <string name="scoreBoard">scoreBoard</string>
+    <string name="col_trans_id_str">DATE</string>
+    <string name="col_name_str">TAP</string>
+    <string name="col_msg_str">LEVEL</string>
+    <string name="history">SCOREBOARD</string>
+    <string name="itemX2">ITEMx2</string>
+</resources>

@@ -74,12 +74,12 @@ public class GameActivityMain extends AppCompatActivity {
                 bool = ran.nextInt(4);
                 if(bool == 1){
                     int delayTime = 3000;
-
+                    int a = ran.nextInt(4);
                     // Use a Handler to delay the appearance of the button
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            int a = ran.nextInt(4);
+
                             switch (a){
                                 case 0:itemButon.setTranslationX(R.dimen.size_10_50);break;
                                 case 1:itemButon.setTranslationX(100);break;
@@ -139,7 +139,7 @@ public class GameActivityMain extends AppCompatActivity {
                 progressBar.setProgress(tap);
                 // Adjust thresholds based on constants
                 Scase(level,MAX_TAP,tap);
-                if (tap == MAX_TAP) {
+                if (tap >= MAX_TAP) {
                     tap = 0;
                     level += 1;
                     MAX_TAP = MAX_TAP * level;

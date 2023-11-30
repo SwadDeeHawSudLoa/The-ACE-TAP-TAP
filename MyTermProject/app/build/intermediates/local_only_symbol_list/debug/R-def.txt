@@ -31,6 +31,13 @@ drawable e59379e89cd5403109aa9ab4ad867045
 drawable ggo
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable test
+drawable test11
+drawable test12
+drawable test13
+drawable test14
+drawable test21
+drawable test23
 id ScoreBoard
 id activity_game_main
 id background

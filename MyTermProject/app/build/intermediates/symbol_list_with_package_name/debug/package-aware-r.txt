@@ -3065,6 +3065,13 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable test
+drawable test11
+drawable test12
+drawable test13
+drawable test14
+drawable test21
+drawable test23
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light

@@ -37,6 +37,7 @@ public class GameActivityMain extends AppCompatActivity {
     private boolean isX2 = false;
     private boolean shown_dialog = false;
     boolean isTimeOut = false;
+    public static int ShowPicin = 0;
     public static int tap = 0;
     public static int dt= 10000;
     public static int level = 1;
@@ -61,6 +62,7 @@ public class GameActivityMain extends AppCompatActivity {
         Random ran = new Random();
         itemButon = findViewById(R.id.imageButton);
         tap = 0;
+        ShowPicin = 0;
         level = 1;
         MAX_TAP = 100;
         timerTextView = findViewById(R.id.timerTextView);
@@ -132,14 +134,17 @@ public class GameActivityMain extends AppCompatActivity {
             public boolean onTouch(View v, MotionEvent event) {
                 Log.i("TouchEvent", "Touch is detected");
                 if(isX2 == true){
-                    tap = tap+20;
+                    tap = (tap+20) * level;
+                    ShowPicin = (ShowPicin+20) * level;
                 }else{
                 tap = tap + 1;
+                ShowPicin = ShowPicin + 1;
                 }
                 progressBar.setProgress(tap);
                 // Adjust thresholds based on constants
-                Scase(level,MAX_TAP,tap);
+                Scase(level,MAX_TAP,ShowPicin);
                 if (tap >= MAX_TAP) {
+                    ShowPicin = 0;
                     tap = 0;
                     level += 1;
                     MAX_TAP = MAX_TAP * level;
@@ -150,44 +155,25 @@ public class GameActivityMain extends AppCompatActivity {
             }
         });
     }
-    public void Scase(int level,int max_tap,int tap){
-      img = findViewById(R.id.imageView);
-        switch (level){
-            case 1:if(tap == max_tap/4){
-                img.setImageResource(R.drawable.cartoonch);
-            }else if(tap == max_tap/2){
+    public void Scase(int level, int max_tap, int showpic) {
+        img = findViewById(R.id.imageView);
+        int baseResourceId = R.drawable.test;
 
-            }else if(tap == max_tap){
+        // Construct the resource name based on the level
+        String resourceName;
 
-            }
-            break;
-            case 2:if(tap == max_tap/4){
-
-            }else if(tap == max_tap/2){
-
-            }else if(tap == max_tap){
-
-            }
-            break;
-            case 4:if(tap == max_tap/4){
-
-            }else if(tap == max_tap/2){
-
-            }else if(tap == max_tap){
-
-            }
-            break;
-            case 5:if(tap == max_tap/4){
-
-            }else if(tap == max_tap/2){
-
-            }else if(tap == max_tap){
-
-            }
-            break;
-            //case 6:
-            //case 7:
-
+        if (showpic >= 0 && showpic < (max_tap * 25) / 100) {
+            resourceName = "test" + level + '1';
+            img.setImageResource(getResources().getIdentifier(resourceName, "drawable", getPackageName()));
+        } else if (showpic >= (max_tap * 25) / 100 && showpic < (max_tap * 50) / 100) {
+            resourceName = "test" + level + '2';
+            img.setImageResource(getResources().getIdentifier(resourceName, "drawable", getPackageName()));
+        } else if (showpic >= (max_tap * 50) / 100 && showpic < (max_tap * 75) / 100) {
+            resourceName = "test" + level + '3';
+            img.setImageResource(getResources().getIdentifier(resourceName, "drawable", getPackageName()));
+        } else if (showpic >= (max_tap * 75) / 100) {
+            resourceName = "test" + level + '4';
+            img.setImageResource(getResources().getIdentifier(resourceName, "drawable", getPackageName()));
         }
     }
     private void startAutoCountdownDialog() {

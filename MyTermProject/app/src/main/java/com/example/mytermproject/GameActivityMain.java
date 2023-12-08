@@ -33,7 +33,8 @@ import java.util.Date;
 import java.util.Random;
 public class GameActivityMain extends AppCompatActivity {
     private Handler handler;
-    private Button itemButon;
+    public static  ImageView gg;
+    private Button itemButon ;
     private boolean isX2 = false;
     private boolean shown_dialog = false;
     boolean isTimeOut = false;
@@ -61,6 +62,7 @@ public class GameActivityMain extends AppCompatActivity {
     private void start() {
         Random ran = new Random();
         itemButon = findViewById(R.id.imageButton);
+gg = findViewById(R.id.imageView3);
         tap = 0;
         ShowPicin = 0;
         level = 1;
@@ -84,7 +86,7 @@ public class GameActivityMain extends AppCompatActivity {
 
                             switch (a){
                                 case 0:itemButon.setTranslationX(R.dimen.size_10_50);break;
-                                case 1:itemButon.setTranslationX(100);break;
+                                case 1:itemButon.setTranslationX(R.dimen.size_18_179);break;
                                 case 2:itemButon.setTranslationX(R.dimen.size_17_150);break;
                                 default:itemButon.setTranslationX(R.dimen.size_19_195);break;
                             }
@@ -115,6 +117,31 @@ public class GameActivityMain extends AppCompatActivity {
                             }, disappearanceDelay);
                         }
                     });
+                }else if(bool == 2){
+                    int delayTime = 3000;
+                   int a = ran.nextInt(4);
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            switch (a){
+                                case 0:gg.setTranslationX(R.dimen.size_10_50);break;
+                                case 1:gg.setTranslationX(R.dimen.size_18_179);break;
+                                case 2:gg.setTranslationX(R.dimen.size_17_150);break;
+                                default:gg.setTranslationX(R.dimen.size_19_195);break;
+                            }
+                            // Show the button
+                            gg.setVisibility(View.VISIBLE);
+                            int disappearanceDelay = 3000;
+                            new Handler().postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    // Hide the button after the specified disappearance delay
+                                    itemButon.setVisibility(View.INVISIBLE);
+                                }
+                            }, disappearanceDelay);
+                        }
+                    }, delayTime);
                 }
                 long secondsRemaining = millisUntilFinished / 1000;
                 timerTextView.setText("Time remaining: " + secondsRemaining + " seconds");;

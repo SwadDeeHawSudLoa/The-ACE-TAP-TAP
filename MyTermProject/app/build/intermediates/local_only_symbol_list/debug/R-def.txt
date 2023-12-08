@@ -49,6 +49,7 @@ id col_trans_id
 id countdownText
 id imageButton
 id imageView
+id imageView3
 id list
 id radio_ninjas
 id radio_pirates

@@ -44,9 +44,17 @@
         android:visibility="invisible" />
 
     <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="110dp"
+        android:layout_height="108dp"
+        android:layout_gravity="center"
+        android:visibility="invisible"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <ImageView
         android:id="@+id/imageView"
         android:layout_width="327dp"
-        android:layout_height="491dp"
+        android:layout_height="445dp"
         android:layout_gravity="center"
         tools:srcCompat="@tools:sample/avatars" />
 

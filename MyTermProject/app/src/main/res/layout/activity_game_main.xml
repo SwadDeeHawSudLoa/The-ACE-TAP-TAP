@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/e59379e89cd5403109aa9ab4ad867045">
+    android:background="@drawable/backgorund">
 
     <TextView
         android:id="@+id/timerTextView"

@@ -20,8 +20,6 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -161,20 +159,28 @@ gg = findViewById(R.id.imageView3);
             public boolean onTouch(View v, MotionEvent event) {
                 Log.i("TouchEvent", "Touch is detected");
                 if(isX2 == true){
-                    tap = (tap+20) * level;
-                    ShowPicin = (ShowPicin+20) * level;
+                    tap = tap + (3 * level);
+                    ShowPicin = ShowPicin + (3 * level);
                 }else{
                 tap = tap + 1;
                 ShowPicin = ShowPicin + 1;
                 }
-                progressBar.setProgress(tap);
+                progressBar.setProgress(ShowPicin);
                 // Adjust thresholds based on constants
                 Scase(level,MAX_TAP,ShowPicin);
-                if (tap >= MAX_TAP) {
+                if (level == 5)
+                {
+                    if (ShowPicin >= MAX_TAP)
+                    {
+                        Log.i("winnnnnn", "winnnnnn");
+                        img = findViewById(R.id.imageView);
+                        img.setImageResource(R.drawable.starbound);
+                    }
+                }
+                else if(ShowPicin >= MAX_TAP) {
                     ShowPicin = 0;
-                    tap = 0;
                     level += 1;
-                    MAX_TAP = MAX_TAP * level;
+                    MAX_TAP = 100 * level;
                     t1.setText("level" + level);
                     progressBar.setMax(MAX_TAP);
                 }

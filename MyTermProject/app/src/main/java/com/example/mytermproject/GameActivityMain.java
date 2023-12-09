@@ -78,17 +78,17 @@ gg = findViewById(R.id.imageView3);
                 bool = ran.nextInt(4);
                 if(bool == 1){
                     int delayTime = 3000;
-                    int a = ran.nextInt(4);
+                    int a = ran.nextInt(6);
                     // Use a Handler to delay the appearance of the button
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
 
                             switch (a){
-                                case 0:itemButon.setTranslationX(R.dimen.size_10_50);break;
-                                case 1:itemButon.setTranslationX(R.dimen.size_18_179);break;
-                                case 2:itemButon.setTranslationX(R.dimen.size_17_150);break;
-                                default:itemButon.setTranslationX(R.dimen.size_19_195);break;
+                                case 0:itemButon.setTranslationX(50);break;
+                                case 1:itemButon.setTranslationX(150);break;
+                                case 2:itemButon.setTranslationX(175);break;
+                                default:itemButon.setTranslationX(200);break;
                             }
                             // Show the button
                             itemButon.setVisibility(View.VISIBLE);
@@ -125,10 +125,10 @@ gg = findViewById(R.id.imageView3);
                         public void run() {
 
                             switch (a){
-                                case 0:gg.setTranslationX(R.dimen.size_10_50);break;
-                                case 1:gg.setTranslationX(R.dimen.size_18_179);break;
-                                case 2:gg.setTranslationX(R.dimen.size_17_150);break;
-                                default:gg.setTranslationX(R.dimen.size_19_195);break;
+                                case 0:gg.setTranslationX(50);break;
+                                case 1:gg.setTranslationX(150);break;
+                                case 2:gg.setTranslationX(175);break;
+                                default:gg.setTranslationX(200);break;
                             }
                             // Show the button
                             gg.setVisibility(View.VISIBLE);

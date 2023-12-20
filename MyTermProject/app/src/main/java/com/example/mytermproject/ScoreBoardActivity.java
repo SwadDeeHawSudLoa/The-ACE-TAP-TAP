@@ -36,7 +36,30 @@ public class ScoreBoardActivity extends AppCompatActivity {
             events.close();
         }
     }
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
     private Cursor getEvents() {
         String[] FROM = { DATE, scoreTap, LEVEL};
         String ORDER_BY = DATE + " DESC";

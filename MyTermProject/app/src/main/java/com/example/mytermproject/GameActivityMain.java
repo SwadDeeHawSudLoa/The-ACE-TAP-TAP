@@ -12,6 +12,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.database.sqlite.SQLiteDatabase;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
@@ -33,6 +34,7 @@ public class GameActivityMain extends AppCompatActivity {
     private Handler handler;
     public static  ImageView gg;
     private Button itemButon ;
+    private MediaPlayer mp;
     private boolean isX2 = false;
     private boolean shown_dialog = false;
     boolean isTimeOut = false;
@@ -42,6 +44,7 @@ public class GameActivityMain extends AppCompatActivity {
     public static int level = 1;
     public static int MAX_TAP = 100;
     int n =100;
+    private LinearLayout background;
     private ProgressBar progressBar;
     private TextView timerTextView;
     private CountDownTimer countDownTimer;
@@ -56,7 +59,39 @@ public class GameActivityMain extends AppCompatActivity {
         handler = new Handler(Looper.getMainLooper());
         // Start the automatic countdown dialog
         startAutoCountdownDialog();
+        mp = MediaPlayer.create(GameActivityMain.this,R.raw.yai);
+        mp.start();
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        mp.pause();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mp.pause();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mp.pause();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mp.start();
+    }
+
     private void start() {
         Random ran = new Random();
         itemButon = findViewById(R.id.imageButton);
@@ -151,6 +186,7 @@ gg = findViewById(R.id.imageView3);
                 showDialog();
             }
         };
+
         // Start the countdown timer
         countDownTimer.start();
         LinearLayout gamelayout = findViewById(R.id.activity_game_main);
@@ -171,7 +207,9 @@ gg = findViewById(R.id.imageView3);
                 if (level == 5)
                 {
                     if (ShowPicin >= MAX_TAP)
-                    {
+                    {   showDialogWin();
+                        background = findViewById(R.id.activity_game_main);
+                        background.setBackgroundResource(R.drawable.spacebg);
                         Log.i("winnnnnn", "winnnnnn");
                         img = findViewById(R.id.imageView);
                         img.setImageResource(R.drawable.starbound);
@@ -188,6 +226,7 @@ gg = findViewById(R.id.imageView3);
             }
         });
     }
+
     public void Scase(int level, int max_tap, int showpic) {
         img = findViewById(R.id.imageView);
         int baseResourceId = R.drawable.test;
@@ -251,7 +290,8 @@ gg = findViewById(R.id.imageView3);
     }
     private void showDialog(){
         Resources res = getResources();
-        if (shown_dialog!=true) { shown_dialog = true ;
+        if (!shown_dialog && !isFinishing()) {
+            shown_dialog = true;
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle("GameOver");
             builder.setMessage("TimeOut");
@@ -259,10 +299,10 @@ gg = findViewById(R.id.imageView3);
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     // Handle OK button click if needed
-                     events = new EventData(GameActivityMain.this);
-                     addEvent();
-                     events.close();
-                    Intent intent = new Intent(GameActivityMain.this,MainActivity.class);
+                    events = new EventData(GameActivityMain.this);
+                    addEvent();
+                    events.close();
+                    Intent intent = new Intent(GameActivityMain.this, MainActivity.class);
                     startActivity(intent);
 
                     dialog.dismiss();
@@ -273,7 +313,7 @@ gg = findViewById(R.id.imageView3);
             builder.setNegativeButton("Restart", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    Intent intent = new Intent(GameActivityMain.this,GameActivityMain.class);
+                    Intent intent = new Intent(GameActivityMain.this, GameActivityMain.class);
                     startActivity(intent);
                     startAutoCountdownDialog();
                     dialog.dismiss();
@@ -282,7 +322,9 @@ gg = findViewById(R.id.imageView3);
             });
             builder.setCancelable(false); // Prevent dialog from being dismissed by tapping outside
             AlertDialog dialog = builder.create();
-            dialog.show();
+            if (!isFinishing()) {
+                dialog.show();
+            }
         }
     }
     private void addEvent(){
@@ -296,4 +338,44 @@ gg = findViewById(R.id.imageView3);
         values.put(LEVEL, level);
         db.insert(TABLE_NAME, null, values);
     }
+    private void showDialogWin(){
+        Resources res = getResources();
+        if (!shown_dialog && !isFinishing()) {
+            shown_dialog = true;
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("YouWin!!!");
+            builder.setMessage("sha na leaw!!!");
+            builder.setPositiveButton("backToMenu", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    // Handle OK button click if needed
+                    events = new EventData(GameActivityMain.this);
+                    addEvent();
+                    events.close();
+                    Intent intent = new Intent(GameActivityMain.this, MainActivity.class);
+                    startActivity(intent);
+
+                    dialog.dismiss();
+
+                    shown_dialog = false;
+                }
+            });
+            builder.setNegativeButton("Restart", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Intent intent = new Intent(GameActivityMain.this, GameActivityMain.class);
+                    startActivity(intent);
+                    startAutoCountdownDialog();
+                    dialog.dismiss();
+                    shown_dialog = false;
+                }
+            });
+            builder.setCancelable(false); // Prevent dialog from being dismissed by tapping outside
+            AlertDialog dialog = builder.create();
+            if (!isFinishing()) {
+                dialog.show();
+            }
+        }
+    }
+
 }

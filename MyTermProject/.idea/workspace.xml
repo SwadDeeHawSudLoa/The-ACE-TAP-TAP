@@ -17,7 +17,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\Home\.android\avd\Pixel_3a_API_34_extension_level_7_x86_64.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\User\.android\avd\Pixel_3a_API_34_extension_level_7_x86_64.avd]" />
   <component name="ExportToHTMLSettings">
     <option name="printScope" value="1" />
     <option name="OUTPUT_DIRECTORY" value="$USER_HOME$/Downloads" />
@@ -100,7 +100,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "cidr.known.project.marker": "true",
-    "last_opened_file_path": "C:/Users/Home/Documents/GitHub/The-ACE-TAP-TAP/MyTermProject",
+    "last_opened_file_path": "C:/Users/User/AndroidStudioProjects/MyApplication6",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.17",
     "project.structure.side.proportion": "0.2",
@@ -118,6 +118,8 @@
       <recent name="C:\Users\User\AndroidStudioProjects\MyTermProject\app\src\main\res\drawable" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Documents\The-ACE-TAP-TAP\MyTermProject\app\src\main\res\raw" />
+      <recent name="C:\Users\User\Documents\The-ACE-TAP-TAP\MyTermProject\app\src\main\res\drawable" />
       <recent name="C:\Users\Home\Documents\GitHub\The-ACE-TAP-TAP\MyTermProject\app\src\main\res\drawable" />
     </key>
     <key name="android.template.1992541003">

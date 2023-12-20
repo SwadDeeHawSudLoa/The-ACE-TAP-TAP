@@ -11,34 +11,45 @@
     tools:context=".MainActivity">
 
 
-    <TextView
+    <ImageView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="top"
-        android:text="TAP TAP AGE GAME"
+        android:src="@drawable/lo"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
-    <Button
+    <ImageButton
         android:id="@+id/button"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#E6C354"
-        android:text="@string/START" />
+        android:layout_height="100dp"
+        android:contentDescription="@string/START"
+        android:src="@drawable/start"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        android:padding="0dp"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/button2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/white"
-        android:text="@string/setting" />
+        android:layout_height="100dp"
+        android:contentDescription="@string/setting"
+        android:src="@drawable/setting"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        android:padding="0dp"/>
+         />
 
-    <Button
+    <ImageButton
         android:id="@+id/ScoreBoard"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/scoreBoard"
-        android:drawableLeft="@android:drawable/btn_star" />
+        android:layout_height="100dp"
+        android:contentDescription="@string/scoreBoard"
+        android:src="@drawable/scoreboard"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        android:padding="0dp"/>
+        />
 
 
 </LinearLayout>

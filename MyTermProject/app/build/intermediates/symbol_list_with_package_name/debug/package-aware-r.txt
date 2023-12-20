@@ -2963,6 +2963,7 @@ drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
 drawable backgorund
+drawable backtomenu
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -2993,6 +2994,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_search_black_24
+drawable lo
 drawable m3_appbar_background
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
@@ -3065,8 +3067,11 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable scoreboard
+drawable setting
 drawable spacebg
 drawable starbound
+drawable start
 drawable test
 drawable test11
 drawable test12
@@ -3807,7 +3812,9 @@ layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
+raw yai
 string START
+string TAP_TAP_AGE_GAME
 string TimeLimit
 string abc_action_bar_home_description
 string abc_action_bar_up_description

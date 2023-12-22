@@ -1412,6 +1412,7 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color green
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color m3_appbar_overlay_color
@@ -2048,6 +2049,7 @@ color primary_text_default_material_dark
 color primary_text_default_material_light
 color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
+color red
 color ripple_material_dark
 color ripple_material_light
 color secondary_text_default_material_dark
@@ -2972,6 +2974,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable challengegameplay
 drawable cprogressbar
 drawable design_fab_background
 drawable design_ic_visibility
@@ -2979,6 +2982,7 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable e59379e89cd5403109aa9ab4ad867045
+drawable gg
 drawable ggo
 drawable ic_arrow_back_black_24
 drawable ic_clear_black_24
@@ -2994,6 +2998,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_search_black_24
+drawable kock
 drawable lo
 drawable m3_appbar_background
 drawable m3_avd_hide_password
@@ -3199,6 +3204,9 @@ id bounceEnd
 id bounceStart
 id button
 id button2
+id button3
+id button4
+id button5
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3324,8 +3332,11 @@ id ignore
 id ignoreRequest
 id image
 id imageButton
+id imageButton2
 id imageView
+id imageView2
 id imageView3
+id imageView4
 id immediateStop
 id included
 id indeterminate
@@ -3560,7 +3571,6 @@ id textStart
 id textTop
 id textView
 id textView2
-id textView3
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3813,6 +3823,8 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
 raw yai
+string Easy
+string Hard
 string START
 string TAP_TAP_AGE_GAME
 string TimeLimit
@@ -3846,12 +3858,14 @@ string abc_toolbar_collapse_description
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
+string backtimenu
 string bottom_sheet_behavior
 string bottomsheet_action_collapse
 string bottomsheet_action_expand
 string bottomsheet_action_expand_halfway
 string bottomsheet_drag_handle_clicked
 string bottomsheet_drag_handle_content_description
+string challengeGamePlay
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern

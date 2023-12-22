@@ -37,10 +37,11 @@ public class GameActivityMain extends AppCompatActivity {
     private MediaPlayer mp;
     private boolean isX2 = false;
     private boolean shown_dialog = false;
+    public static boolean easy = false,hard = false;
     boolean isTimeOut = false;
     public static int ShowPicin = 0;
     public static int tap = 0;
-    public static int dt= 10000;
+    public static int dt= 20000;
     public static int level = 1;
     public static int MAX_TAP = 100;
     int n =100;
@@ -108,7 +109,14 @@ gg = findViewById(R.id.imageView3);
         countDownTimer = new CountDownTimer(durationMillis, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                bool = ran.nextInt(4);
+                if(hard==true){
+                    bool = ran.nextInt(100);
+                } else if (easy==true) {
+                    bool = ran.nextInt(10);
+                }else {
+                    bool = ran.nextInt(25);
+                }
+
                 if(bool == 1){
                     int delayTime = 3000;
                     int a = ran.nextInt(6);
@@ -150,31 +158,6 @@ gg = findViewById(R.id.imageView3);
                             }, disappearanceDelay);
                         }
                     });
-                }else if(bool == 2){
-                    int delayTime = 3000;
-                   int a = ran.nextInt(4);
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            switch (a){
-                                case 0:gg.setTranslationX(50);break;
-                                case 1:gg.setTranslationX(150);break;
-                                case 2:gg.setTranslationX(175);break;
-                                default:gg.setTranslationX(200);break;
-                            }
-                            // Show the button
-                            gg.setVisibility(View.VISIBLE);
-                            int disappearanceDelay = 3000;
-                            new Handler().postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    // Hide the button after the specified disappearance delay
-                                    itemButon.setVisibility(View.INVISIBLE);
-                                }
-                            }, disappearanceDelay);
-                        }
-                    }, delayTime);
                 }
                 long secondsRemaining = millisUntilFinished / 1000;
                 timerTextView.setText("Time remaining: " + secondsRemaining + " seconds");;

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+    <color name="green">#C47ACCAB</color>
+    <color name="red">#FF1010</color>
     <color name="white">#FFFFFFFF</color>
     <dimen name="size_1">1dp</dimen>
     <dimen name="size_10_50">50dp</dimen>
@@ -25,10 +27,14 @@
     <dimen name="size_9_48">48dp</dimen>
     <dimen name="textsize1">15sp</dimen>
     <dimen name="textsize2">13sp</dimen>
+    <string name="Easy">Easy</string>
+    <string name="Hard">Hard</string>
     <string name="START">START</string>
     <string name="TAP_TAP_AGE_GAME">TAP TAP AGE GAME</string>
     <string name="TimeLimit">TimeLimit</string>
     <string name="app_name">My Term Project</string>
+    <string name="backtimenu">BackToMenu</string>
+    <string name="challengeGamePlay">challengeGamePlay</string>
     <string name="col_msg_str">LEVEL</string>
     <string name="col_name_str">TAP</string>
     <string name="col_trans_id_str">DATE</string>

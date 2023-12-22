@@ -1,6 +1,8 @@
 R_DEF: Internal format may change without notice
 local
 color black
+color green
+color red
 color white
 dimen size_1
 dimen size_10_50
@@ -27,11 +29,14 @@ dimen textsize1
 dimen textsize2
 drawable backgorund
 drawable backtomenu
+drawable challengegameplay
 drawable cprogressbar
 drawable e59379e89cd5403109aa9ab4ad867045
+drawable gg
 drawable ggo
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable kock
 drawable lo
 drawable scoreboard
 drawable setting
@@ -64,20 +69,25 @@ id activity_game_main
 id background
 id button
 id button2
+id button3
+id button4
+id button5
 id col_msg
 id col_name
 id col_trans_id
 id countdownText
 id imageButton
+id imageButton2
 id imageView
+id imageView2
 id imageView3
+id imageView4
 id list
 id radio_ninjas
 id radio_pirates
 id simpleProgressBar
 id textView
 id textView2
-id textView3
 id textviewList
 id timerTextView
 id touchView
@@ -90,10 +100,14 @@ layout countdown
 mipmap ic_launcher
 mipmap ic_launcher_round
 raw yai
+string Easy
+string Hard
 string START
 string TAP_TAP_AGE_GAME
 string TimeLimit
 string app_name
+string backtimenu
+string challengeGamePlay
 string col_msg_str
 string col_name_str
 string col_trans_id_str

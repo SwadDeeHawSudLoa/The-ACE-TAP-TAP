@@ -16,4 +16,8 @@
     <string name="history">SCOREBOARD</string>
     <string name="itemX2">ITEMx2</string>
     <string name="TAP_TAP_AGE_GAME">TAP TAP AGE GAME</string>
+    <string name="backtimenu">BackToMenu</string>
+    <string name="Easy">Easy</string>
+    <string name="Hard">Hard</string>
+    <string name="challengeGamePlay">challengeGamePlay</string>
 </resources>

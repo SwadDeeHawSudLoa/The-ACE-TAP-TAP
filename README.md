@@ -10,4 +10,4 @@ term Project รายวิชาCS361 คณะวิทยาศาสตร�
 7.history score bord
 8.item x2
 9.challeng game play
-10.monsters destroy  buiding
+10.monsters destroy  buiding(ยกเลิก) เเทนด้วย Music 

@@ -4,6 +4,7 @@ color black
 color green
 color red
 color white
+dimen size100
 dimen size_1
 dimen size_10_50
 dimen size_11_60
@@ -34,10 +35,13 @@ drawable cprogressbar
 drawable e59379e89cd5403109aa9ab4ad867045
 drawable gg
 drawable ggo
+drawable i
 drawable ic_launcher_background
 drawable ic_launcher_foreground
-drawable kock
+drawable kiii
 drawable lo
+drawable logooooogg
+drawable reset
 drawable scoreboard
 drawable setting
 drawable spacebg
@@ -80,7 +84,6 @@ id imageButton
 id imageButton2
 id imageView
 id imageView2
-id imageView3
 id imageView4
 id list
 id radio_ninjas
@@ -99,6 +102,7 @@ layout column
 layout countdown
 mipmap ic_launcher
 mipmap ic_launcher_round
+raw i
 raw yai
 string Easy
 string Hard
@@ -118,6 +122,7 @@ string leve3
 string level1
 string level2
 string level4
+string reset
 string scoreBoard
 string setting
 string threemins

@@ -28,7 +28,7 @@ import java.util.HashMap;
 public class ScoreBoardActivity extends AppCompatActivity {
     private EventData events;
     private Cursor cursor;
-    private Button btt;
+    private ImageButton btt;
 
     private ImageButton btt2;
 

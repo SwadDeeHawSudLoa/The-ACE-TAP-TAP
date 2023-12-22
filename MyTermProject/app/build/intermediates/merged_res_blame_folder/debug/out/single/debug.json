@@ -12,12 +12,12 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\drawable\\setting.png"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\layout_column.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\layout\\column.xml"
-    },
-    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\drawable_test.png.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\drawable\\test.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\layout_column.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\layout\\column.xml"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\drawable_test11.png.flat",
@@ -48,6 +48,10 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\drawable\\ic_launcher_foreground.xml"
     },
     {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\drawable_reset.png.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\drawable\\reset.png"
+    },
+    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\mipmap-xhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\mipmap-xhdpi\\ic_launcher.webp"
     },
@@ -70,10 +74,6 @@
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\drawable_scoreboard.png.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\drawable\\scoreboard.png"
-    },
-    {
-        "merged": "com.example.mytermproject.app-merged_res-31:/layout_activity_score_board.xml.flat",
-        "source": "com.example.mytermproject.app-main-33:/layout/activity_score_board.xml"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\drawable_test42.png.flat",
@@ -212,6 +212,14 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "com.example.mytermproject.app-merged_res-31:/raw_i.mp3.flat",
+        "source": "com.example.mytermproject.app-main-33:/raw/i.mp3"
+    },
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\drawable_logooooogg.png.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\drawable\\logooooogg.png"
+    },
+    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\drawable_test22.png.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\drawable\\test22.png"
     },
@@ -220,12 +228,16 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\drawable\\test41.png"
     },
     {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\drawable_kock.png.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\drawable\\kock.png"
+    },
+    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\drawable_test54.png.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\drawable\\test54.png"
     },
     {
-        "merged": "com.example.mytermproject.app-merged_res-31:/drawable_kock.png.flat",
-        "source": "com.example.mytermproject.app-main-33:/drawable/kock.png"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\drawable_kiii.png.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\drawable\\kiii.png"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\layout_activity_setting.xml.flat",
@@ -234,5 +246,9 @@
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\drawable_starbound.png.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\drawable\\starbound.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\drawable_i.jpg.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\drawable\\i.jpg"
     }
 ]

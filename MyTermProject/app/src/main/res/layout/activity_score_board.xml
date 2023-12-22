@@ -96,7 +96,7 @@
 
         <ImageButton
             android:id="@+id/imageButton2"
-            android:layout_width="@dimen/size_17_150"
+            android:layout_width="198dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
             android:background="@android:color/transparent"
@@ -105,14 +105,17 @@
             android:scaleType="fitCenter"
             android:src="@drawable/backtomenu" />
 
-        <Button
+        <ImageButton
             android:id="@+id/button5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/size100"
+            android:layout_height="@dimen/size100"
             android:layout_gravity="center"
             android:layout_weight="1"
+            android:contentDescription="@string/reset"
+            android:background="@android:color/transparent"
             android:backgroundTint="@color/white"
-            android:text="Button"
+            android:scaleType="fitCenter"
+            android:src="@drawable/reset"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
     </LinearLayout>
 

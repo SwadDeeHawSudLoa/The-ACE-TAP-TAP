@@ -23,4 +23,5 @@
     <dimen name="size_19_195">195dp</dimen>
     <dimen name="textsize1">15sp</dimen>
     <dimen name="textsize2">13sp</dimen>
+    <dimen name="size100">100dp</dimen>
 </resources>

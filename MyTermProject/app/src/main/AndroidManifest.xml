@@ -13,15 +13,19 @@
         android:theme="@style/Theme.MyTermProject"
         tools:targetApi="31">
         <activity
+            android:screenOrientation="portrait"
             android:name=".ScoreBoardActivity"
             android:exported="false" />
         <activity
+            android:screenOrientation="portrait"
             android:name=".SettingActivity"
             android:exported="false" />
         <activity
+            android:screenOrientation="portrait"
             android:name=".GameActivityMain"
             android:exported="false" />
         <activity
+            android:screenOrientation="portrait"
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

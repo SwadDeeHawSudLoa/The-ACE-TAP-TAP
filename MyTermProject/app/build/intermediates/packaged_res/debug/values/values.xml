@@ -4,6 +4,7 @@
     <color name="green">#C47ACCAB</color>
     <color name="red">#FF1010</color>
     <color name="white">#FFFFFFFF</color>
+    <dimen name="size100">100dp</dimen>
     <dimen name="size_1">1dp</dimen>
     <dimen name="size_10_50">50dp</dimen>
     <dimen name="size_11_60">60dp</dimen>
@@ -45,6 +46,7 @@
     <string name="level1">level1</string>
     <string name="level2">level2</string>
     <string name="level4">level4</string>
+    <string name="reset">Reset</string>
     <string name="scoreBoard">scoreBoard</string>
     <string name="setting">SETTING</string>
     <string name="threemins">30secs</string>

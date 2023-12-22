@@ -11,22 +11,27 @@
 
     <TextView
         android:id="@+id/timerTextView"
+        android:layout_marginTop="@dimen/size_2_19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="#000000"
-        android:backgroundTint="#E1DAAC"
-        android:text="@string/TimeLimit" />
+        android:backgroundTint="#74ED48"
+        android:text="@string/TimeLimit"
+        android:textColor="@color/black" />
 
     <TextView
         android:id="@+id/textView2"
+        android:layout_marginTop="@dimen/size_2_19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:background="#E4A3A3"
-        android:text="@string/level1" />
+        android:text="@string/level1"
+        android:textColor="@color/black" />
 
     <ProgressBar
+
         android:id="@+id/simpleProgressBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,14 +47,6 @@
         android:drawableLeft="@drawable/ggo"
         android:text="@string/itemX2"
         android:visibility="invisible" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="110dp"
-        android:layout_height="108dp"
-        android:layout_gravity="center"
-        android:visibility="invisible"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <ImageView
         android:id="@+id/imageView"

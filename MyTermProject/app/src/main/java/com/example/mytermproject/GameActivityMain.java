@@ -96,7 +96,6 @@ public class GameActivityMain extends AppCompatActivity {
     private void start() {
         Random ran = new Random();
         itemButon = findViewById(R.id.imageButton);
-gg = findViewById(R.id.imageView3);
         tap = 0;
         ShowPicin = 0;
         level = 1;

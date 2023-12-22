@@ -43,7 +43,7 @@ public class SettingActivity extends AppCompatActivity {
         rb1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                GameActivityMain.dt = 50000;
+                GameActivityMain.dt = 60000;
                 GameActivityMain.easy=true;
                 GameActivityMain.hard=false;
             }

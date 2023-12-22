@@ -40,6 +40,7 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable kiii
 drawable lo
+drawable logo
 drawable logooooogg
 drawable reset
 drawable scoreboard
@@ -47,7 +48,6 @@ drawable setting
 drawable spacebg
 drawable starbound
 drawable start
-drawable test
 drawable test11
 drawable test12
 drawable test13
@@ -82,6 +82,7 @@ id col_trans_id
 id countdownText
 id imageButton
 id imageButton2
+id imageButton3
 id imageView
 id imageView2
 id imageView4
@@ -101,8 +102,10 @@ layout activity_setting
 layout column
 layout countdown
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 raw i
+raw ii
 raw yai
 string Easy
 string Hard
@@ -117,6 +120,7 @@ string col_name_str
 string col_trans_id_str
 string fivemins
 string history
+string i
 string itemX2
 string leve3
 string level1

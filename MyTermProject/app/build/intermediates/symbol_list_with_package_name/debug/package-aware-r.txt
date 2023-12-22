@@ -3002,6 +3002,7 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_search_black_24
 drawable kiii
 drawable lo
+drawable logo
 drawable logooooogg
 drawable m3_appbar_background
 drawable m3_avd_hide_password
@@ -3081,7 +3082,6 @@ drawable setting
 drawable spacebg
 drawable starbound
 drawable start
-drawable test
 drawable test11
 drawable test12
 drawable test13
@@ -3337,6 +3337,7 @@ id ignoreRequest
 id image
 id imageButton
 id imageButton2
+id imageButton3
 id imageView
 id imageView2
 id imageView4
@@ -3823,9 +3824,11 @@ layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
 raw i
+raw ii
 raw yai
 string Easy
 string Hard
@@ -3885,6 +3888,7 @@ string fab_transformation_sheet_behavior
 string fivemins
 string hide_bottom_view_on_scroll_behavior
 string history
+string i
 string icon_content_description
 string itemX2
 string item_view_role_description

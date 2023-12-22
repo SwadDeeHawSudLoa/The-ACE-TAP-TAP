@@ -8,6 +8,10 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\drawable\\gg.png"
     },
     {
+        "merged": "com.example.mytermproject.app-merged_res-31:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.mytermproject.app-main-33:/mipmap-mdpi/ic_launcher_foreground.webp"
+    },
+    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\drawable_setting.png.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\drawable\\setting.png"
     },
@@ -28,12 +32,24 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\layout\\countdown.xml"
     },
     {
+        "merged": "com.example.mytermproject.app-merged_res-31:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.mytermproject.app-main-33:/mipmap-hdpi/ic_launcher_foreground.webp"
+    },
+    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\drawable_cprogressbar.xml.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\drawable\\cprogressbar.xml"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\drawable_test34.png.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\drawable\\test34.png"
+    },
+    {
+        "merged": "com.example.mytermproject.app-merged_res-31:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.mytermproject.app-main-33:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.mytermproject.app-merged_res-31:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.mytermproject.app-main-33:/mipmap-mdpi/ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\drawable_test53.png.flat",
@@ -52,6 +68,10 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\drawable\\reset.png"
     },
     {
+        "merged": "com.example.mytermproject.app-merged_res-31:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.mytermproject.app-main-33:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\mipmap-xhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\mipmap-xhdpi\\ic_launcher.webp"
     },
@@ -66,6 +86,10 @@
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\mipmap-anydpi_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\mipmap-anydpi\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.mytermproject.app-merged_res-31:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.mytermproject.app-main-33:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\mipmap-hdpi_ic_launcher_round.webp.flat",
@@ -100,6 +124,10 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
+        "merged": "com.example.mytermproject.app-merged_res-31:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.mytermproject.app-main-33:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\drawable_test52.png.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\drawable\\test52.png"
     },
@@ -108,12 +136,20 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "com.example.mytermproject.app-merged_res-31:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.mytermproject.app-main-33:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\drawable_backtomenu.png.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\drawable\\backtomenu.png"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\drawable_test33.png.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\drawable\\test33.png"
+    },
+    {
+        "merged": "com.example.mytermproject.app-merged_res-31:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.mytermproject.app-main-33:/mipmap-xhdpi/ic_launcher_foreground.webp"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\drawable_lo.png.flat",
@@ -156,6 +192,22 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\drawable\\ggo.png"
     },
     {
+        "merged": "com.example.mytermproject.app-merged_res-31:/drawable_logo.jpg.flat",
+        "source": "com.example.mytermproject.app-main-33:/drawable/logo.jpg"
+    },
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\raw_ii.mp3.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\raw\\ii.mp3"
+    },
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\raw_i.mp3.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\raw\\i.mp3"
+    },
+    {
+        "merged": "com.example.mytermproject.app-merged_res-31:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.mytermproject.app-main-33:/mipmap-xxhdpi/ic_launcher_foreground.webp"
+    },
+    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\xml_backup_rules.xml.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\xml\\backup_rules.xml"
     },
@@ -164,8 +216,24 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\drawable\\test21.png"
     },
     {
+        "merged": "com.example.mytermproject.app-merged_res-31:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.mytermproject.app-main-33:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.example.mytermproject.app-merged_res-31:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.mytermproject.app-main-33:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.mytermproject.app-merged_res-31:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.mytermproject.app-main-33:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\layout_activity_game_main.xml.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\layout\\activity_game_main.xml"
+    },
+    {
+        "merged": "com.example.mytermproject.app-merged_res-31:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.mytermproject.app-main-33:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
@@ -178,6 +246,10 @@
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\layout_activity_score_board.xml.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\layout\\activity_score_board.xml"
+    },
+    {
+        "merged": "com.example.mytermproject.app-merged_res-31:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.mytermproject.app-main-33:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\drawable_test13.png.flat",
@@ -204,16 +276,24 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\drawable\\test44.png"
     },
     {
+        "merged": "com.example.mytermproject.app-merged_res-31:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.mytermproject.app-main-33:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\drawable_test12.png.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\drawable\\test12.png"
+    },
+    {
+        "merged": "com.example.mytermproject.app-merged_res-31:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.mytermproject.app-main-33:/drawable/ic_launcher_background.xml"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-main-33:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.mytermproject.app-merged_res-31:/raw_i.mp3.flat",
-        "source": "com.example.mytermproject.app-main-33:/raw/i.mp3"
+        "merged": "com.example.mytermproject.app-merged_res-31:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.mytermproject.app-main-33:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.mytermproject.app-merged_res-31:\\drawable_logooooogg.png.flat",

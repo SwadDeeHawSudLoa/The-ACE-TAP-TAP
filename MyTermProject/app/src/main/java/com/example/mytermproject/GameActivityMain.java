@@ -41,7 +41,7 @@ public class GameActivityMain extends AppCompatActivity {
     boolean isTimeOut = false;
     public static int ShowPicin = 0;
     public static int tap = 0;
-    public static int dt= 20000;
+    public static int dt= 40000;
     public static int level = 1;
     public static int MAX_TAP = 100;
     int n =100;
@@ -60,7 +60,7 @@ public class GameActivityMain extends AppCompatActivity {
         handler = new Handler(Looper.getMainLooper());
         // Start the automatic countdown dialog
         startAutoCountdownDialog();
-        mp = MediaPlayer.create(GameActivityMain.this,R.raw.yai);
+        mp = MediaPlayer.create(GameActivityMain.this,R.raw.ii);
         mp.start();
     }
 
@@ -211,7 +211,6 @@ public class GameActivityMain extends AppCompatActivity {
 
     public void Scase(int level, int max_tap, int showpic) {
         img = findViewById(R.id.imageView);
-        int baseResourceId = R.drawable.test;
 
         // Construct the resource name based on the level
         String resourceName;
@@ -313,7 +312,7 @@ public class GameActivityMain extends AppCompatActivity {
        // Change this line to use 'tap' directly
         SQLiteDatabase db = events.getWritableDatabase();
         ContentValues values = new ContentValues();
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
         String currentDateAndTime = sdf.format(new Date());
         values.put(DATE, currentDateAndTime);
         values.put(scoreTap, tap);
